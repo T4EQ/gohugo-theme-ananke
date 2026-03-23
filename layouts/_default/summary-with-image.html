@@ -1,6 +1,6 @@
 {{ $featured_image := partials.Include "func/GetFeaturedImage.html" . }}
 <article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l dark-gray no-underline">
+  <div class="db pv4 ph3 ph0-l no-underline">
     <div class="flex-column flex-row-ns flex">
       {{ if $featured_image }}
           {{/* Trimming the slash and adding absURL make sure the image works no matter collections.Where our site lives */}}
@@ -11,7 +11,7 @@
         </div>
       {{ end }}
       <div class="blah w-100{{ if $featured_image }} w-60-ns {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr3-ns" "pl3-ns" }}{{ end }}">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
+        <h1 class="f3 fw7 avenir mt0 lh-title">
           <a href="{{.RelPermalink}}" class="color-inherit dim link">
             {{ .Title }}
             </a>
